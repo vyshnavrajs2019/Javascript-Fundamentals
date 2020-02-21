@@ -41,3 +41,17 @@ console.log('organisation' in person) // false
 for(let attr in person){
     console.log(attr, ":", person[attr])
 }
+
+// Clonging an obj
+
+let aNewPerson = Object.assign({}, person, {firstName: "New"}, {lastName: "Name"})
+
+console.log(aNewPerson)
+
+
+// Deleting a property
+
+delete person.lastName
+
+console.log(person)
+console.log(aNewPerson)
