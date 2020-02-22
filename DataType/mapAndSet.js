@@ -100,6 +100,20 @@ for(let item of set){
 	console.log(item)
 }
 
+
+console.log('-----------------------------------')
+for(let item of set.entries()){
+	console.log(item)
+}
+console.log('-----------------------------------')
+for(let item of set.values()){
+	console.log(item)
+}
+console.log('-----------------------------------')
+for(let item of set.keys()){
+	console.log(item)
+}
+console.log('-----------------------------------')
 set.forEach((val, valueAgain, set_) => {
 	console.log(val, valueAgain, set_)
 })
