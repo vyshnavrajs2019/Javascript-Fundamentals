@@ -33,3 +33,35 @@ console.log(Math.sin(0.5*Math.PI)) // sin(pi/2)
 console.log(Math.floor(234.9999))
 console.log(Math.ceil(34.1))
 console.log(Math.trunc(34)) // removed the part after the decimal point
+
+
+// isFinite and isNaN
+
+console.log(isFinite(Infinity))
+console.log(isFinite(212.222))
+console.log(isFinite(3.0))
+console.log(isFinite("28738923.2932"))
+
+console.log(isNaN(34.00041))
+console.log(isNaN("34.4440001"))
+console.log(isNaN("  3232.090 "))
+console.log(isNaN(" 341a"))
+
+
+// Comparison using Object.is
+// Does not type cast
+console.log(Object.is(NaN, NaN))
+console.log(Object.is(23.00, 23))
+
+
+// Type conversion
+// To integer
+console.log(parseInt("   23.444 a  "))
+console.log(parseInt("  111  ", 2)) // binary to decimal conversion
+console.log(parseInt("34px"))
+console.log(parseInt("34.34.45"))
+
+// To float
+console.log(parseFloat("   2323e-2a  "))
+console.log(parseFloat(23.434e-1))
+console.log(parseFloat("34.45.56"))
