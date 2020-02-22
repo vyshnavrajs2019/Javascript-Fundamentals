@@ -17,7 +17,6 @@ console.log(num.valueOf())
 // Math library
 
 console.log(Math.log(10))
-console.log(Math.log10)
 console.log(Math.log2(10))
 console.log(Math.log10(10))
 console.log(Math.PI)
