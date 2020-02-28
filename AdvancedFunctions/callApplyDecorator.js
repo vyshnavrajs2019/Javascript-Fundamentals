@@ -75,6 +75,10 @@ sep();
 
 // Bind
 
-let bound = applyObj.sayHi.bind(applyObj, "arg1", "arg2")
+let bound = applyObj.sayHi.bind(applyObj)
 
-bound()
+bound("arg1", "arg2", "arg3")
+
+// Can bind arguments as well
+let bound2 = applyObj.sayHi.bind(applyObj, "arg1", "arg2")
+bound2()
