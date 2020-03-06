@@ -1,3 +1,4 @@
+'use strict';
 // Try Catch
 function sep() {console.log('--------------------------------------------------')}
 
@@ -44,3 +45,16 @@ try {
 } catch (error) {
 	console.log(error.message)
 }
+
+sep();
+
+// Global catch
+window.onerror = function(message, url, line, col, error) {
+	alert(`${message}\n At ${line}:${col} of ${url}`);
+};
+
+function readData() {
+	badFunc(); // Whoops, something went wrong!
+}
+
+readData();
