@@ -86,3 +86,19 @@ function* qna(){
 gen = qna()
 let question = gen.next()
 console.log(question.value, gen.next(7).value)
+
+// Generator.throw
+
+function* generatorError(){
+	try {
+		let result = yield "Get me an error object"
+	} catch (error) {
+		console.log(error.name)
+		console.log(error.message)
+	}
+}
+
+gen = generatorError()
+let qn = gen.next().value
+console.log(qn)
+gen.throw(new Error("Hey this an error object"))
