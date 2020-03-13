@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script defer src="BrowserDocumentsEventsInterface/Document/DOMNavigation.js"></script>
+    <script defer src="BrowserDocumentsEventsInterface/Document/searchingElementsDOM.js"></script>
 </head>
 <body>
     <div class="outer1">
         <div class="outer2">
-            <span class="sibling-span-1">Span 1 Text</span>
-            <span class="sibling-span-2">
+            <span class="span sibling-span-1" id="span">
+                <span class="span" id="span-2">
+                    <span class="span" id="span-3">
+                        <span id="closest"></span>
+                    </span>
+                </span>                
+            </span>
+            <span class="span sibling-span-2" id="span-2">
                 Span 2 Text <a href="">Link</a>
             </span>
         </div>
