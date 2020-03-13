@@ -5,47 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script defer src="BrowserDocumentsEventsInterface/Document/styleAndClasses.js"></script>
+    <script defer src="BrowserDocumentsEventsInterface/Document/sizeAndScroll.js"></script>
 </head>
 <body>
-    <!-- COMMENT -->
-    <style>
-        #span{
-            color: brown; 
-            margin: 1em;
-        }
-    </style>
-    <div class="outer1">
-        <div class="outer2">
-            <span class="span sibling-span-1" id="span">
-                <span class="span" id="span-2">
-                    <span class="span" id="span-3">
-                        <span id="closest"></span>
-                    </span>
-                </span>                
-            </span>
-            <span class="span sibling-span-2" id="span2">
-                Span 2 Text <a href="" id="link">Link</a>
-            </span>
+    <div id="outer1">
+        <div id="outer2">
+            <div id="fixed"></div>
         </div>
     </div>
-    <input type="text" id="elem" value="value" something="non-standard" show-text="hello" data-about="I am an input text" data-purpose="Get inputs">
-    <table style="width:100%">
-        <tr>
-          <th>Firstname</th>
-          <th>Lastname</th>
-          <th>Age</th>
-        </tr>
-        <tr>
-          <td>Jill</td>
-          <td>Smith</td>
-          <td>50</td>
-        </tr>
-        <tr>
-          <td>Eve</td>
-          <td>Jackson</td>
-          <td>94</td>
-        </tr>
-      </table> 
+
+    <div id="scroll1" onscroll="whileScrolling()">
+        <div id="scroll2">
+        </div>
+    </div>
+    <style>
+        #scroll1{
+            position: relative;
+            border: 1px solid red;
+            margin: 10px;
+            height: 100px;
+            width: 200px;
+            overflow: scroll;
+        }
+        #scroll2{
+            position: relative;
+            background-color: blue;
+            height: 300px;
+            width: 500px;
+        }
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        #outer1{
+            margin: 10px;
+            /* position: relative; */
+            height: 200px;
+            width: 200px;
+            border: 1px solid red;
+            padding: 10px;
+        }
+        #outer2{
+            position: relative;
+            height: 100px;
+            width: 100px;
+            border: 1px solid blue;
+        }
+        #fixed{
+            position: fixed;
+            border: 20px solid red;
+            padding: 10px;
+        }
+    </style>
 </body>
 </html>
