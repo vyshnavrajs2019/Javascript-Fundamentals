@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src="BrowserDocumentsEventsInterface/Events/preventDefaultActions.js"></script>
+    <script defer src="BrowserDocumentsEventsInterface/Events/customEvent.js"></script>
 </head>
 <body>
-    <form action="https://www.google.com/search" method="get" id="form">
-        <input type="text" name="q" id="q">
-        <button type="submit" onclick="handleClick(event)">Google Search</button>
-    </form>
+    <button type="text" id="button1">Button 1</button>
+    <button type="text" id="button2">Button 2</button>
+    <button type="text" id="button3">Button 3</button>
+
+    <div id="div1" onclick="whenClicked(event)">
+        <h1>Div 1</h1>
+        <div id="div2">
+            <h2>Div 2</h2>
+            <div id="div3">
+                <h3>Div 3</h3>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
