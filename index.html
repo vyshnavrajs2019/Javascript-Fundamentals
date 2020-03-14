@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src="BrowserDocumentsEventsInterface/UIEvents/mouseEventBasics.js"></script>
+    <script defer src="BrowserDocumentsEventsInterface/UIEvents/mouseOutEnterLeaveOver.js"></script>
 </head>
 <body>
     
-    <button id="button1" type="button">Try click & dblClick</button>
-    <button id="clear" type="button">Clear</button>
-    <br><br>
-    <div id="div1"></div>
-
-    <button type="button" id="button2">ctrl + shift + click</button>
+    <div id="outer">
+        <div id="inner"></div>
+    </div>
     
+    <style>
+    #outer{
+        height: 200px;
+        width: 300px;
+        background: orange;
+        padding: 1em;
+    }
+    #inner{
+        height: 100px;
+        width: 150px;
+        background-color: darkcyan;
+        margin: auto;
+    }
+    </style>
+
 </body>
 </html>
