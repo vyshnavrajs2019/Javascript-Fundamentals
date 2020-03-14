@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src="BrowserDocumentsEventsInterface/Events/eventDelegation.js"></script>
+    <script defer src="BrowserDocumentsEventsInterface/Events/preventDefaultActions.js"></script>
 </head>
 <body>
-    <button type="button">File</button>
-    <button type="button">Edit</button>
-    <button type="button">View</button>
-    <button type="button">Help</button>
+    <form action="https://www.google.com/search" method="get" id="form">
+        <input type="text" name="q" id="q">
+        <button type="submit" onclick="handleClick(event)">Google Search</button>
+    </form>
 </body>
 </html>
