@@ -4,6 +4,9 @@ function print(...args){
 	console.log(...args)
 }
 
+input.oninput = function(){
+	print(this.value)
+}
 
 input.onchange = function(){
 	print(this.value)
