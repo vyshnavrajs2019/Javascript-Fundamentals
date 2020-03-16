@@ -4,16 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src="BrowserDocumentsEventsInterface/FormsControls/eventsChangeInput.js"></script>
+    <script defer src="BrowserDocumentsEventsInterface/FormsControls/formSubmit.js"></script>
 </head>
 <body>   
     
-    <form>
-        <input type="text" placeholder="Type something" id="input">
-        <select id="select">
-            <option value="Red">Red</option>
-            <option value="Orange">Orange</option>
-        </select>
+    <form id="form" action="https://www.google.com/search">
+        <input type="text" id="query" placeholder="Search query" name="q"><br>
+        <button type="submit" id="submit">Google</button>
     </form>
 
 </body>
