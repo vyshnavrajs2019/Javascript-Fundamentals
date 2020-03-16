@@ -4,32 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src="BrowserDocumentsEventsInterface/FormsControls/focusBlur.js"></script>
+    <script defer src="BrowserDocumentsEventsInterface/FormsControls/eventsChangeInput.js"></script>
 </head>
 <body>   
-    <form name="myform1" id="form" tabindex="1">
-        <p id="p">Password must contain @ and *</p>
-        <input type="password" id="password" placeholder="Password" tabindex="2">
-        <input type="text"     id="username" placeholder="Username" tabindex="2">
+    
+    <form>
+        <input type="text" placeholder="Type something" id="input">
+        <select id="select">
+            <option value="Red">Red</option>
+            <option value="Orange">Orange</option>
+        </select>
     </form>
-
-    <br>
-    <button tabindex="1">Button</button>
 
 </body>
 <style>
     *{
         padding: 0;
         margin: 0;
-    }
-    form{
-        margin: 1em;
-        border: 2px solid #f3f3f3;
-        padding: 1em;;
-    }
-    .err{
-        border: 2px solid red;
-        color: red;
-    }
-    </style>
+    }yle>
 </html>
