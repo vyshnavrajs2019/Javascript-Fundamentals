@@ -4,21 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src="BrowserDocumentsEventsInterface/DOMAndResourceLoading/onLoadOnError.js"></script>
+    <script defer src="BrowserDocumentsEventsInterface/Miscellaneous/mutationObserver.js"></script>
 </head>
 <body>   
-    <h1>Check out the console</h1>
-    <form id="form" action="https://www.google.com/search">
-        <input type="text" id="query" placeholder="Search query" name="q"><br>
-        <button type="submit" id="submit">Google</button>
-    </form>
-    
-    <!-- img -->
-    <img src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg" alt="Wallpaper">
-    <img id="wallpaper" src="https://images.pexels.com/photos/1236701/pexels-photo-1236701.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Wallpaper">
-    
-    
-
+    <div id="mutation_div">
+        <p>Time is <span id="time">7650234</span></p>
+    </div>
 </body>
 <style>
     *{
