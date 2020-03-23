@@ -4,34 +4,84 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<script defer src="AdditionalArticles/WebComponents/slotCompositions.js"></script>
+	<script defer src="AdditionalArticles/WebComponents/shadowDOMStyle.js"></script>
 </head>
 <body>
+	
+	<template id="tmpl">
+		<style>
+			:host {
+				position: fixed;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				display: inline-block;
+				border: 1px solid red;
+				padding: 10px;
+			}
+		</style>
+		<slot></slot>
+	</template>
+	<custom-dialog>
+		Hello!
+	</custom-dialog>
 
-	<user-card>
+	<template id="tmpl2">
+		<style>
+		:host([centered]) {
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			border-color: blue;
+		}
+	
+		:host {
+			display: inline-block;
+			border: 1px solid red;
+			padding: 10px;
+		}
+		</style>
+		<slot></slot>
+	</template>
+
+	<custom-dialog-2 centered>
+		Centered!
+	</custom-dialog-2>
+	  
+	<custom-dialog-2>
+		Not centered.
+	</custom-dialog-2>
+
+	<style>
+		span { font-weight: bold }
+	</style>
+
+	<user-card-3>
+		<div slot="username"><span>John Smith</span></div>
+	</user-card-3>
+	  
+	<style>
+		user-card-4 {
+		  --user-card-field-color: green;
+		}
+	</style>
+
+	<template id="tmpl4">
+		<style>
+		.field {
+			color: var(--user-card-field-color, black);
+		}
+		</style>
+		<div class="field">Name: <slot name="username"></slot></div>
+		<div class="field">Birthday: <slot name="birthday"></slot></div>
+	</template>
+
+
+	<user-card-4>
 		<span slot="username">John Smith</span>
 		<span slot="birthday">01.01.2001</span>
-	</user-card>
-
-	<user-card>
-		<span slot="username">John Smith</span>
-		<div>
-		  <!-- slot must be direct child of user-card -->
-		  <span slot="birthday">01.01.2001</span>
-		</div>
-	</user-card>
-
-	<user-card>
-		<span slot="username">John</span>
-		<span slot="username">Smith</span>
-	</user-card>
-
-	<user-card-2>
-		<div>I like to swim.</div>
-		<span slot="username">Vyshnav Raj</span>
-		<span slot="birthday">13.03.1998</span>
-		<div>And play volleyball too!</div>
-	</user-card-2>
+  	</user-card-4>
 
 </body>
 </html>
