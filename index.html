@@ -4,9 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<script defer src="AdditionalArticles/NetworkRequests/XMLHttpRequest.js"></script>
+	<script defer src="AdditionalArticles/WebComponents/customElements.js"></script>
 </head>
 <body>
-    
+    <time-formatted datetime="2019-12-01"
+	year="numeric" month="long" day="numeric"
+	hour="numeric" minute="numeric" second="numeric"
+	time-zone-name="short"></time-formatted>
+	<br>
+	<time-formatted_ id="elem" hour="numeric" minute="numeric" second="numeric"></time-formatted_>
+
+	<button is="hello-button">Click me</button>
+	<button is="hello-button" disabled>Disabled</button>
 </body>
 </html>
