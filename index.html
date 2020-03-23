@@ -4,9 +4,29 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<script defer src="AdditionalArticles/WebComponents/shadowDOM.js"></script>
+	<script defer src="AdditionalArticles/WebComponents/templateElement.js"></script>
 </head>
 <body>
-	<show-hello name="Vyshnav" id="elem"></show-hello>
+	<template>
+		<tr>
+		  <td>Contents</td>
+		</tr>
+	</template>
+
+	<template>
+		<style>
+		  p { font-weight: bold; }
+		</style>
+		<script>
+		  alert("Hello");
+		</script>
+	</template>
+
+	<template id="tmpl">
+		<script>
+		  alert("Hello");
+		</script>
+		<div class="message">Hello, world!</div>
+	</template>
 </body>
 </html>
