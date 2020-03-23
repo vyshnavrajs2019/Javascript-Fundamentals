@@ -4,29 +4,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<script defer src="AdditionalArticles/WebComponents/templateElement.js"></script>
+	<script defer src="AdditionalArticles/WebComponents/slotCompositions.js"></script>
 </head>
 <body>
-	<template>
-		<tr>
-		  <td>Contents</td>
-		</tr>
-	</template>
 
-	<template>
-		<style>
-		  p { font-weight: bold; }
-		</style>
-		<script>
-		  alert("Hello");
-		</script>
-	</template>
+	<user-card>
+		<span slot="username">John Smith</span>
+		<span slot="birthday">01.01.2001</span>
+	</user-card>
 
-	<template id="tmpl">
-		<script>
-		  alert("Hello");
-		</script>
-		<div class="message">Hello, world!</div>
-	</template>
+	<user-card>
+		<span slot="username">John Smith</span>
+		<div>
+		  <!-- slot must be direct child of user-card -->
+		  <span slot="birthday">01.01.2001</span>
+		</div>
+	</user-card>
+
+	<user-card>
+		<span slot="username">John</span>
+		<span slot="username">Smith</span>
+	</user-card>
+
+	<user-card-2>
+		<div>I like to swim.</div>
+		<span slot="username">Vyshnav Raj</span>
+		<span slot="birthday">13.03.1998</span>
+		<div>And play volleyball too!</div>
+	</user-card-2>
+
 </body>
 </html>
