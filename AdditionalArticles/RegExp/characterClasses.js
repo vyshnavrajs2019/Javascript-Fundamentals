@@ -31,4 +31,4 @@ console.log(result);
 
 // to match \n
 result = str.match(/1..Line/s)
-console.log(result[0]);
+console.log(result);
